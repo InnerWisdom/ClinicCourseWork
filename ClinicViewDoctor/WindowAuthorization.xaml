@@ -1,0 +1,51 @@
+﻿<Window x:Class="ClinicViewDoctor.WindowAuthorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="304.464" Width="573.156">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="DimGray"/>
+            <Setter Property="BorderBrush" Value="DimGray"/>
+            <Setter Property="MinWidth" Value="110"/>
+            <Setter Property="FontSize" Value="15px"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="DimGray"/>
+            <Setter Property="FontSize" Value="15px"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="MaxWidth" Value="160"/>
+            <Setter Property="MaxHeight" Value="60"/>
+            <Setter Property="Background" Value="DimGray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontSize" Value="15px"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Логин:" />
+        <Label Grid.Row="1" Grid.Column="0" Content="Пароль:" />
+        <TextBox x:Name="TextBoxLogin" Grid.Row="0" Grid.Column="1" />
+        <TextBox x:Name="TextBoxPassword" Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="buttonEnter" Content="Войти" Grid.Row="2" Grid.Column="0" Click="buttonEnter_Click"/>
+        <Button x:Name="buttonCancel" Content="Отмена" Grid.Row="2" Grid.Column="1" Click="buttonCancel_Click"/>
+    </Grid>
+</Window>
